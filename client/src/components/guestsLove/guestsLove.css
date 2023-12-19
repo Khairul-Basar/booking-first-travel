@@ -1,0 +1,48 @@
+.gLoveContainer {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gLoveItem {
+  flex: 1;
+  gap: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  /* border-radius: 10px; */
+}
+
+.guestLoveImg {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.gLoveTitle {
+  font-weight: bold;
+}
+
+.gLoveCity {
+  font-weight: 300;
+}
+
+.gLovePrice {
+  font-weight: 500;
+}
+
+.gLoveRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 3px 5px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.gLoveRating > span {
+  font-size: 14px;
+}

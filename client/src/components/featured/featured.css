@@ -1,0 +1,35 @@
+.propertyContainer {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  z-index: 1;
+}
+
+.propertyItem {
+  position: relative;
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+}
+
+.propertyImg {
+  width: 100%;
+  object-fit: cover;
+}
+
+.propertyTitles {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+.propertyTitles > h1 {
+  margin: 0;
+  padding: 0;
+}
+.propertyTitles > h2 {
+  margin: 0;
+  padding: 0;
+}
