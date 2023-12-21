@@ -6,6 +6,7 @@ import "./home.css";
 import PropertyList from "../../components/property/PropertyList";
 import GuestsLove from "../../components/guestsLove/GuestsLove";
 import Subcribe from "../../components/subscribe/Subcribe";
+import Footer from "../../components/footer/Footer";
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
         <h1 className="homeTitle">Home guests love</h1>
         <GuestsLove />
         <Subcribe />
+        <Footer />
       </div>
     </div>
   );

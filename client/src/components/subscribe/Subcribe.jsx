@@ -9,7 +9,7 @@ function Subcribe() {
         Sign up and we'll send the best deals to you
       </span>
       <div className="subInputBtn">
-        <input type="email" placeholder="Enter your email" />
+        <input type="email" placeholder="Your email address" />
         <button>Subscribe</button>
       </div>
     </div>
