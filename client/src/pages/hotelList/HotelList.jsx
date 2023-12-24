@@ -5,6 +5,7 @@ import Header from "../../components/header/Header";
 import { useLocation } from "react-router-dom";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
+import SearchHotel from "../../components/searchHotel/SearchHotel";
 
 function HotelList() {
   const location = useLocation();
@@ -88,7 +89,15 @@ function HotelList() {
             </div>
             <button>Search</button>
           </div>
-          <div className="hListResult"></div>
+          <div className="hListResult">
+            <SearchHotel />
+            <SearchHotel />
+            <SearchHotel />
+            <SearchHotel />
+            <SearchHotel />
+            <SearchHotel />
+            <SearchHotel />
+          </div>
         </div>
       </div>
     </div>

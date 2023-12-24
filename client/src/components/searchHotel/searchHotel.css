@@ -1,0 +1,107 @@
+.searchHotelContainer {
+  border: 1px solid lightgray;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.shImg {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.shDec {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 2;
+}
+.shTitle {
+  margin: 0;
+  font-size: 20px;
+  color: #0071c2;
+}
+
+.shDistance {
+  font-size: 14px;
+}
+
+.shTaxiOp {
+  font-size: 14px;
+  background-color: #008009;
+  color: white;
+  width: max-content;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.shSubtitle {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.shFeatures {
+  font-size: 14px;
+}
+.shFreeCancel {
+  font-size: 14px;
+  color: #008009;
+  font-weight: bold;
+}
+.shFreeCancelSubtitle {
+  font-size: 14px;
+  color: #008009;
+}
+.shDetails {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.shRating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.shRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  padding: 5px 5px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.shRating > span {
+  font-size: 18px;
+}
+
+.shDetailTexts {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.shPrice {
+  font-size: 22px;
+  font-weight: bold;
+}
+.shTaxOp {
+  font-size: 14px;
+  color: gray;
+}
+
+.shCheckButton {
+  height: 40px;
+  padding: 0 20px;
+  background-color: #0071c2;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
