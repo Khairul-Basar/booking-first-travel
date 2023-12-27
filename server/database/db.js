@@ -7,9 +7,15 @@ async function db() {
     await mongoose.connect(DB_URL);
     console.log("Database Connected successfully!!!");
   } catch (err) {
-    console.log(err);
-    console.log("there is a problem.");
+    throw err;
   }
+
+  mongoose.connection.on("disconnected", () => {
+    console.log("Database disconnected!");
+  });
+  mongoose.connection.on("connected", () => {
+    console.log("Database connected!");
+  });
 }
 
 module.exports = db;
