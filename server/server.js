@@ -9,6 +9,7 @@ const { PORT } = process.env;
 const express = require("express");
 const db = require("./database/db");
 const cors = require("cors");
+const cookieParser = require("cookie-parser");
 
 // create express app
 const app = express();
@@ -21,6 +22,7 @@ const userRoute = require("./routes/users");
 
 // use app and others
 app.use(express.json());
+app.use(cookieParser());
 app.use(
   cors({
     origin: true,
