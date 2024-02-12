@@ -4,12 +4,11 @@ const User = require("../models/userSchema");
 const updateUser = async (req, res) => {
   const { id } = req.params;
   try {
-    const updatedUser = await User.findByIdAndUpdate(id, req.body, {
+    const userUpdate = await User.findByIdAndUpdate(id, req.body, {
       new: true,
     });
 
-    console.log(updatedUser);
-    res.status(200).json(updatedUser);
+    res.status(200).json(userUpdate);
   } catch (err) {
     next(err);
   }
@@ -29,8 +28,8 @@ const singleUser = async (req, res) => {
 // All User
 const allUsers = async (req, res, next) => {
   try {
-    const allUsers = await User.find();
-    res.status(200).json(allUsers);
+    const users = await User.find();
+    res.status(200).json(users);
   } catch (err) {
     next(err);
   }

@@ -9,12 +9,13 @@ const {
   allHotels,
   deleteHotel,
 } = require("../controllers/hotel");
+const { verifyAdmin } = require("../utils/verifyToken");
 
 // CREATE
-router.post("/", createHotel);
+router.post("/", verifyAdmin, createHotel);
 
 // Update Hotel
-router.put("/:id", updateHotel);
+router.put("/:id", verifyAdmin, updateHotel);
 
 // Single Hotel
 router.get("/:id", singleHotel);
@@ -23,6 +24,6 @@ router.get("/:id", singleHotel);
 router.get("/", allHotels);
 
 // Delete Hotel
-router.delete("/:id", deleteHotel);
+router.delete("/:id", verifyAdmin, deleteHotel);
 
 module.exports = router;

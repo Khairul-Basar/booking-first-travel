@@ -4,8 +4,8 @@ const Hotel = require("../models/hotelSchema");
 const createHotel = async (req, res) => {
   const reqHotel = req.body;
   try {
-    const createHotel = await Hotel.create(reqHotel);
-    res.status(200).json(createHotel);
+    const saveHotel = await Hotel.create(reqHotel);
+    res.status(200).json(saveHotel);
   } catch (err) {
     next(err);
   }
@@ -15,12 +15,11 @@ const createHotel = async (req, res) => {
 const updateHotel = async (req, res) => {
   const { id } = req.params;
   try {
-    const updatedHotel = await Hotel.findByIdAndUpdate(id, req.body, {
+    const hotelUpdate = await Hotel.findByIdAndUpdate(id, req.body, {
       new: true,
     });
 
-    console.log(updatedHotel);
-    res.status(200).json(updatedHotel);
+    res.status(200).json(hotelUpdate);
   } catch (err) {
     next(err);
   }
@@ -40,8 +39,8 @@ const singleHotel = async (req, res) => {
 // All Hotel
 const allHotels = async (req, res, next) => {
   try {
-    const allHotels = await Hotel.find();
-    res.status(200).json(allHotels);
+    const hotels = await Hotel.find();
+    res.status(200).json(hotels);
   } catch (err) {
     next(err);
   }

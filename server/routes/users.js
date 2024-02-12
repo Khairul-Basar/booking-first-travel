@@ -8,25 +8,34 @@ const {
   allUsers,
   deleteUser,
 } = require("../controllers/user");
-const { verifyToken, verifyUser } = require("../utils/verifyToken");
+const {
+  verifyToken,
+  verifyUser,
+  verifyAdmin,
+} = require("../utils/verifyToken");
 
-router.get("/checkauthentication", verifyToken, (req, res, next) => {
-  res.send("Hello User, You are logged in.");
-});
+// router.get("/checkauthentication", verifyToken, (req, res, next) => {
+//   res.send("Hello User, You are logged in.");
+// });
 
-router.get("/checkuser/:id", verifyUser, (req, res, next) => {
-  res.send("Hello User, You are logged in and you can delete your account.");
-});
-// Update User
-router.put("/:id", verifyToken, updateUser);
+// router.get("/checkuser/:id", verifyUser, (req, res, next) => {
+//   res.send("Hello User, You are logged in and you can delete your account.");
+// });
 
-// Single User
-router.get("/:id", singleUser);
+// router.get("/checkadmin/:id", verifyAdmin, (req, res, next) => {
+//   res.send("Hello Admin, You are logged in and you can delete All accounts.");
+// });
 
 // Get All User
-router.get("/", allUsers);
+router.get("/", verifyAdmin, allUsers);
+
+// Update User
+router.put("/:id", verifyUser, updateUser);
+
+// Single User
+router.get("/:id", verifyUser, singleUser);
 
 // Delete User
-router.delete("/:id", deleteUser);
+router.delete("/:id", verifyUser, deleteUser);
 
 module.exports = router;

@@ -26,7 +26,18 @@ const verifyUser = (req, res, next) => {
   });
 };
 
+const verifyAdmin = (req, res, next) => {
+  verifyToken(req, res, () => {
+    if (req.user.isAdmin) {
+      next();
+    } else {
+      return next(createError(403, "You aren't Authenticated!"));
+    }
+  });
+};
+
 module.exports = {
   verifyToken,
   verifyUser,
+  verifyAdmin,
 };
